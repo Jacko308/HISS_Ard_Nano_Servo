@@ -3,7 +3,6 @@
 #include <Adafruit_INA219.h>
 #include <Wire.h>
 
-
 // ---------------- Pin Definitions -------------------- //
 #define LED 13 
 #define Servo1_pin 9
