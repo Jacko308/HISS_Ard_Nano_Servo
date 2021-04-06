@@ -3,35 +3,42 @@
 #include <Adafruit_INA219.h>
 #include <Wire.h>
 
+
+// ---------------- Pin Definitions -------------------- //
 #define LED 13 
 #define Servo1_pin 9
 #define Servo2_pin 6
 #define Servo3_pin 5
 #define Servo4_pin 3
 
-
+// ---------------- Objects -------------------- //
 Adafruit_INA219 ina219_Servo1;
 Adafruit_INA219 ina219_Servo2(0x41);
 Adafruit_INA219 ina219_Servo3(0x42);
 
-Servo servo1;  // create servo object to control a servo
+Servo servo1;  // create servo1 object to control a servo1
 Servo servo2;
 Servo servo3;
 Servo servo4; 
-                // a maximum of eight servo objects can be created 
- 
+               
+// ---------------- Global variables -------------------- //
 float Servo1_current_mA = 0;
 float Servo2_current_mA = 0;
 float Servo3_current_mA = 0;
 
 int pos = 0;    // variable to store the servo position 
  
-void setup() 
-{ pinMode(LED, OUTPUT);
+void setup() { 
+  // ----------------
+  pinMode(LED, OUTPUT);
+
+  // ---------------- Init servos -------------------- //
   servo1.attach(Servo1_pin, 600, 2400);  // attaches the servo on pin 20
   servo2.attach(Servo2_pin, 600, 2400);  // attaches the servo on pin 21
   servo3.attach(Servo3_pin, 600, 2400);  // attaches the servo on pin 22
   servo4.attach(Servo4_pin, 600, 2400);  // attaches the servo on pin 23 
+  
+  // ---------------- Init current sensors -------------------- //
   ina219_Servo1.begin();
   ina219_Servo2.begin();
   ina219_Servo3.begin();
