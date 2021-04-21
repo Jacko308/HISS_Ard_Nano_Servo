@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"name": "ESP32_DEVKITC_Techno-Weed",
+			"path": "..\\..\\..\\PlatformIO\\Projects\\ESP32_DEVKITC_Techno-Weed"
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
+}
