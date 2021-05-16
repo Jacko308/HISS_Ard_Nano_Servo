@@ -5,10 +5,13 @@
 
 // ---------------- Pin Definitions -------------------- //
 #define LED 13 
-#define Servo1_pin 9
-#define Servo2_pin 6
-#define Servo3_pin 5
-#define Servo4_pin 3
+#define Servo1_pin 2
+#define Servo2_pin 3
+#define Servo3_pin 4
+#define Servo4_pin 5
+
+#define Pressure_voltage A0
+
 
 // ---------------- Objects -------------------- //
 Adafruit_INA219 ina219_Servo1;
